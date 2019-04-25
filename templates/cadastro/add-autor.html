@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar autor</title>
+</head>
+<body>
+<h1>Agregar autor</h1>
+    <form method="post">{% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" name="button">Guardar</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lista autores</title>
+</head>
+<body>
+
+<H1>Autores registrados</H1>
+<table border="1">
+    <thead >
+    <th>Nomes</th>
+    <th>Telefono</th>
+    <th>Email</th>
+    <th>Ação</th>
+    </thead>
+    <tbody>
+    {% for a in cadastro %}
+    <tr>
+        <td>{{a.id}}</td>
+        <td>{{a.nome}}</td>
+        <td>{{a.telefone_residencial}}</td>
+        <td>{{a.email}}</td>
+        <td><a href="{% url 'cadastro_app:lista-libros' a.id  %}" >Visualizar</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% for a in cadastro %}
+{{a}}
+{% endfor %}
+
+</body>
+</html>
